@@ -8,6 +8,12 @@ if len(sys.argv) != 2:
     print("Only takes one argument!")
     sys.exit(1)
 
-dice(int(sys.argv[1]))
+try:
+    sides = int(sys.argv[1])
+except ValueError:
+    print("Argument must be a number!")
+    sys.exit(1)
+
+dice(sides)
 
 
